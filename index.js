@@ -9,7 +9,7 @@ const AuthRouter = require("./routes/authRoute")
 const dotenv = require('dotenv'); //.env
 const jwt = require('jsonwebtoken');
 const fs = require("fs")
-const publicKey = fs.readFileSync('public.key');
+const publicKey = fs.readFileSync(path.resolve(__dirname,'./public.key'),'utf-8')
 dotenv.config();
 const server = express();
 
